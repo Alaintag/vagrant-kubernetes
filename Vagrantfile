@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
         master.vm.hostname = "k8s-master-node"
         master.vm.network "private_network", ip: "172.192.1.10"
         master.vm.provider "virtualbox" do |vb|
-            vb.memory = 4048
+            vb.memory = 2024
             vb.cpus = 2
         end
         master.vm.provision "shell", path: "scripts/common.sh"
